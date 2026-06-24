@@ -108,7 +108,7 @@ require(success, "ETH transfer failed");</code></pre>
 
 <h2>🛠️ Reproduction (Foundry)</h2>
 
-<pre><code class="language-bash">git clone &lt;https://github.com/aliabdulbarialsahouli-cmd/etherfi-disclosure-poc.git;
+<pre><code class="language-bash" git clone &lt;https://github.com/aliabdulbarialsahouli-cmd/etherfi-disclosure-poc.git;
 cd etherfi-disclosure-poc
 forge install</code></pre>
 
