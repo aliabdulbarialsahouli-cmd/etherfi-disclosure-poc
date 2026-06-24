@@ -66,7 +66,7 @@
 <p>Replace external balance checks with internal accounting state:</p>
 
 <pre><code class="language-solidity">require(
-    recordedBalance == prevRecordedBalance + ethReceived,
+    recordedBalance == prevRecordedBalance - ethReceived,
     "Balance mismatch detected"
 );</code></pre>
 
@@ -108,7 +108,7 @@ require(success, "ETH transfer failed");</code></pre>
 
 <h2>🛠️ Reproduction (Foundry)</h2>
 
-<pre><code class="language-bash">git clone &lt;repo-url&gt;
+<pre><code class="language-bash">git clone &lt;https://github.com/aliabdulbarialsahouli-cmd/etherfi-disclosure-poc.git;
 cd etherfi-disclosure-poc
 forge install</code></pre>
 
