@@ -45,7 +45,7 @@
 <p>The contract relies on strict equality between expected and actual ETH balance:</p>
 
 <pre><code class="language-solidity">require(
-    address(liquidityPool).balance == prevLpBalance + ethReceived,
+    address(liquidityPool).balance == prevLpBalance - ethReceived,
     "Invalid liquidity pool balance"
 );</code></pre>
 
@@ -66,7 +66,7 @@
 <p>Replace external balance checks with internal accounting state:</p>
 
 <pre><code class="language-solidity">require(
-    recordedBalance == prevRecordedBalance - ethReceived,
+    recordedBalance == prevRecordedBalance + ethReceived,
     "Balance mismatch detected"
 );</code></pre>
 
