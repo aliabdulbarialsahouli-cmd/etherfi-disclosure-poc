@@ -66,7 +66,7 @@
 <p>Replace external balance checks with internal accounting state:</p>
 
 <pre><code class="language-solidity">require(
-    recordedBalance == prevRecordedBalance + ethReceived,
+    recordedBalance == prevRecordedBalance - ethReceived,
     "Balance mismatch detected"
 );</code></pre>
 
